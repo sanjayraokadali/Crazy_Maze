@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CRAZY MAZEY GAME</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+
+    <style media="screen">
+      body{
+        background-color: grey;
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+      <h1 class="base_title" >BasePage</h1>
+      <a href="{% url 'mazeApp:homepage' %}"> HomePage</a>
+
+
+
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Prim_Maze.svg/1200px-Prim_Maze.svg.png" class='image_area' alt="">
+
+        {% if cond == FALSE %}
+          <script type="text/javascript">
+            alert('Border Touched')
+          </script>
+        {% endif %}
+  </body>
+
+    <!-- <script src="{% static 'js/basepage.js' %}" charset="utf-8"></script> -->
+</html>
