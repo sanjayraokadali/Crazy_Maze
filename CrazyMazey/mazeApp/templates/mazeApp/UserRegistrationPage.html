@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'mazeApp/BasePage.html' %}
+
+{% block bodyblock %}
+  <h1>User Registration</h1>
+  <form  method="POST" >
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" name="" value="Register">
+  </form>
+
+{% endblock %}
