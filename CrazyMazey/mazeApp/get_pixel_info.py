@@ -94,7 +94,7 @@ if sys.platform == 'win32':
 
         return (red, green, blue)
     getPixel = _winGetPixel
-    
+
 
 elif sys.platform == 'darwin':
     from rubicon.objc import ObjCClass, CGPoint

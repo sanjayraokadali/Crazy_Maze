@@ -3,9 +3,15 @@ import pyautogui, sys
 from time import sleep
 import ctypes
 import mouseinfo
+from django.http import HttpResponseRedirect
 from mazeApp.get_pixel_info import *
+from django.urls import reverse
 # Create your views here.
 def BasePage(request):
+
+    return render(request, 'mazeApp/BasePage.html',)
+
+def HomePage(request):
 
     cond = True
 
@@ -23,17 +29,20 @@ def BasePage(request):
 
         li = [red,green,blue]
 
-        print('rgb' + str(li))
+        print('X: COORDINATE: ' + str(x) + '   Y COORDINATE ' +  str(y) + ' ')
+
+
+
+        print('RGB' + str(li))
+
+        # pyautogui.moveTo(1920 - (x+w), 1080 - (y+h))
+
 
         if li == [0,0,0]:
             cond = False
+            message = "You Touched the boundary! try again!!"
             break
 
 
-    return render(request, 'mazeApp/BasePage.html',{'cond':cond})
-
-def HomePage(request):
-
-
-
-    return render(request, 'mazeApp/HomePage.html')
+    return render(request,'mazeApp/HomePage.html')
+    # return HttpResponseRedirect(reverse('basepage'),{'message':message})
