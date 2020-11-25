@@ -22,22 +22,18 @@
 
     <div class="container">
 
-      <a href="{% url 'mazeApp:homepage' %}" class='btn btn-primary'> Start The Game!</a>
-      <h1 class="base_title">Crazy Mazey!</h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Prim_Maze.svg/1200px-Prim_Maze.svg.png" class='image_area' alt="">
+          {% block bodyblock %}
 
-
-        {% block bodyblock %}
-
-
-
-        {% endblock %}
+          <h1 class="base_title">Crazy Mazey!</h1>
+          <a href="{% url 'mazeApp:homepage' %}" class='btn btn-primary'> Start The Game!</a>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Prim_Maze.svg/1200px-Prim_Maze.svg.png" class='image_area' alt="">
 
 
 
-
+          {% endblock %}
 
     </div>
+
 
 
   </body>
