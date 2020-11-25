@@ -4,6 +4,8 @@
 
 {% block bodyblock %}
 <h1 class="base_title" >Ooops!!!</h1>
+<h4>{{ message }}</h4>
+<h2>You took {{time}} secs!</h2>
 <h2>No worries! Go back and try Again!!</h2>
 <a href="{% url 'basepage' %}" class="btn btn-outline-danger" >Back Home!</a>
 
